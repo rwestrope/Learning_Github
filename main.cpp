@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 using namespace std;
 
 #include "ItemToPurchase.h"
@@ -21,6 +22,7 @@ int main() {
 
     cout << "Enter the item quantity:" << endl;
     cin >> item1Quantity;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     cout << endl;
 
@@ -42,5 +44,6 @@ int main() {
     cout << item1.GetName() << " " << item1.GetQuantity() << " @ $" << item1.GetPrice() << " = $" << item1.GetPrice() * item1.GetQuantity() << endl;
     cout << item2.GetName() << " " << item2.GetQuantity() << " @ $" << item2.GetPrice() << " = $" << item2.GetPrice() * item2.GetQuantity() << endl;
 
+    cout << endl;
     cout << "Total: $" << (item1.GetPrice() * item1.GetQuantity()) + (item2.GetPrice() * item2.GetQuantity()) << endl;
 }
