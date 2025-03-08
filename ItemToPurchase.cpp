@@ -24,7 +24,7 @@ void ItemToPurchase::SetPrice(int price) {
 }
 int ItemToPurchase::GetQuantity() const {
     return itemQuantity;
-}  
+}
 void ItemToPurchase::SetQuantity(int quantity) {
     itemQuantity = quantity;
 }

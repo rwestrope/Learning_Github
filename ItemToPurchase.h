@@ -2,7 +2,7 @@
 
 class ItemToPurchase {
     public:
-        ItemToPurchase(string name, int price, int quantity);
+        ItemToPurchase(string itemName = "none", int itemPrice = 0, int itemQuantity = 0);
         void SetName(string name);
         string GetName() const;
         void SetPrice(int price);
