@@ -1,5 +1,9 @@
 #include <iostream>
 using namespace std;
+
+#ifndef SHOPPING_CART_H
+#define SHOPPING_CART_H
+
 #include <string>
 #include <vector>
 #include "ItemToPurchase.h"
@@ -22,3 +26,5 @@ class ShoppingCart{
         string currentDate;
         vector<ItemToPurchase> cartItems;
 };
+
+#endif // SHOPPING_CART_H
