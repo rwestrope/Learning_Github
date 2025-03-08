@@ -4,6 +4,12 @@ using namespace std;
 
 #include "ItemToPurchase.h"
 
+ItemToPurchase::ItemToPurchase(string name, int price, int quantity) {
+    itemName = name;
+    itemPrice = price;
+    itemQuantity = quantity;
+}
+
 string ItemToPurchase::GetName() const {
     return itemName;
 }
