@@ -14,7 +14,7 @@ int main() {
 
     cout << "Item 1" << endl;
     cout << "Enter the item name:" << endl;
-    cin >> item1Name;
+    getline(cin, item1Name);
 
     cout << "Enter the item price:" << endl;
     cin >> item1Price;
@@ -26,7 +26,7 @@ int main() {
 
     cout << "Item 2" << endl;
     cout << "Enter the item name:" << endl;
-    cin >> item2Name;
+    getline(cin, item2Name);
 
     cout << "Enter the item price:" << endl;
     cin >> item2Price;
