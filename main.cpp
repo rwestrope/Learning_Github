@@ -21,9 +21,9 @@ int main() {
     cin >> item1Price;
 
     cout << "Enter the item quantity:" << endl;
+    cout << endl;
     cin >> item1Quantity;
 
-    cout << endl;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     cout << "Item 2" << endl;
