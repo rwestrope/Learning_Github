@@ -6,6 +6,7 @@ using namespace std;
 
 #include <string>
 #include <vector>
+#include <limits>
 #include "ItemToPurchase.h"
 
 class ShoppingCart{
