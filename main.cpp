@@ -35,6 +35,7 @@ int main() {
 
     cout << "Enter the item quantity:" << endl;
     cin >> item2Quantity;
+    cout << endl;
 
 
     cout << "TOTAL COST" << endl;
