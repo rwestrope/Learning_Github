@@ -99,16 +99,16 @@ int ShoppingCart::GetCostOfCart() const{
 }
 void ShoppingCart::PrintTotal(){
     cout << customerName << "'s Shopping Cart - " << currentDate << endl;
+    cout << "Number of Items: " << GetNumItemsInCart() << endl << endl;
     if (cartItems.size() == 0){
         cout << "SHOPPING CART IS EMPTY" << endl;
     }
     else {
-        cout << "Number of Items: " << GetNumItemsInCart() << endl << endl;
         for (unsigned int i = 0; i < cartItems.size(); i++){
             cartItems.at(i).PrintItemCost();
         }
-        cout << endl << "Total: $" << GetCostOfCart() << endl;
     }
+    cout << endl << "Total: $" << GetCostOfCart() << endl << endl;
 }
 void ShoppingCart::PrintDescriptions(){
     cout << customerName << "'s Shopping Cart - " << currentDate << endl << endl;
