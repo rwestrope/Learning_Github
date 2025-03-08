@@ -36,44 +36,37 @@ int main()
 void PrintMenu(ShoppingCart &userCart)
 {
     char userChoice = ' ';
-    bool validChoice;
-
+    
     while (userChoice != 'q') {
         cout << "MENU" << endl;
         cout << "a - Add item to cart" << endl;
-        cout << "r - Remove item from cart" << endl;
+        cout << "d - Remove item from cart" << endl;
         cout << "c - Change item quantity" << endl;
         cout << "i - Output items' descriptions" << endl;
         cout << "o - Output shopping cart" << endl;
         cout << "q - Quit" << endl;
         cout << endl;
 
-        cout << "Choose an option:" << endl;
-        
+        cout << "Choose an option: "; // Changed to keep the prompt on the same line
+
         // Reset for new input
-        validChoice = false;
-        while (!validChoice) {
-            cin >> userChoice;
-            
-            // Check if input was successful and only a single character
-            if (cin.fail() || cin.peek() != '\n') {
-                cin.clear(); // Clear error flags
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear buffer
-                cout << "Choose a valid option:" << endl;
-            } else {
-                validChoice = true;
-            }
+        string input;
+        getline(cin, input); // Read the entire line
+
+        // Check if input is valid
+        if (input.length() == 1) {
+            userChoice = input[0]; // Get the first character
+        } else {
+            userChoice = ' '; // Reset userChoice if input is invalid
         }
-        
-        // Clear the newline from the buffer
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
         cout << endl;
 
         switch (userChoice) {
             case 'a':
                 userCart.AddItem();
                 break;
-            case 'r':
+            case 'd':
                 RemoveItem(userCart);
                 break;
             case 'c':
@@ -89,7 +82,7 @@ void PrintMenu(ShoppingCart &userCart)
                 // Exit the loop
                 break;
             default:
-                cout << "Choose a valid option." << endl << endl;
+                cout << "Invalid option. Please try again." << endl;
                 break;
         }
     }
